@@ -7,8 +7,8 @@ import com.github.upgradeablehopper.gui.UpgradeGui;
 import com.github.upgradeablehopper.hopper.HopperData;
 import com.github.upgradeablehopper.hopper.HopperManager;
 import com.github.upgradeablehopper.util.ChatUtil;
+import com.github.upgradeablehopper.util.CompatibilityUtil;
 import org.bukkit.Location;
-import org.bukkit.Particle;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -93,9 +93,7 @@ public class GuiListener implements Listener {
             }
             if (config.isEnableParticles()) {
                 Location loc = data.getLocation();
-                if (loc != null) {
-                    loc.getWorld().spawnParticle(Particle.VILLAGER_HAPPY, loc.clone().add(0.5, 0.7, 0.5), 15, 0.3, 0.3, 0.3, 0.05);
-                }
+                CompatibilityUtil.spawnUpgradeParticles(loc, config.getParticleType(), config.getParticleCount());
             }
             String successMsg = config.getMessage("upgrade-success")
                     .replace("{TIER}", String.valueOf(data.getTier()))
