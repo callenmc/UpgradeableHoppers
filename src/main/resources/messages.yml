@@ -1,0 +1,27 @@
+prefix: "&8[&6UpgradeableHoppers&8] &r"
+
+messages:
+  no-permission: "&cYou do not have permission to execute this action."
+  not-a-player: "&cThis command can only be executed by a player."
+  invalid-tier: "&cInvalid tier specified! Please specify a number between 1 and {MAX_TIER}."
+  no-target-hopper: "&cYou must look directly at a hopper to perform this action."
+  
+  upgrade-success: "&aSuccessfully upgraded hopper to &6Tier {TIER} &7(&e{SPEED} items/sec&7) for &a${COST}&7!"
+  not-enough-money: "&cYou don't have enough money for this upgrade! Required: &a${COST}&c, Balance: &e${BALANCE}&c."
+  already-max-tier: "&eThis hopper is already at the maximum tier!"
+  hopper-invalid: "&cThe hopper block is no longer valid or has been removed."
+  rapid-click: "&cPlease wait a moment before clicking again."
+  
+  admin-tier-set: "&aSuccessfully set hopper at &f{X}, {Y}, {Z} &ato &6Tier {TIER}&a."
+  admin-inspect: "&7Hopper at &f{X}, {Y}, {Z}&7: &6Tier {TIER} &7(&e{SPEED} items/sec&7)."
+  reload-success: "&aPlugin configuration and messages successfully reloaded."
+  
+  help-header: "&8&m--------&r &6Upgradeable Hoppers &8&m--------"
+  help-info: "&e/uh info &7- Inspect the tier of the hopper you are looking at."
+  help-set: "&e/uh set <tier> &7- Set the tier of the targeted hopper (Admin)."
+  help-reload: "&e/uh reload &7- Reload configuration files (Admin)."
+  
+  item-lore:
+    tier-line: "&7Tier: &6Tier {TIER}"
+    speed-line: "&7Speed: &e{SPEED} items/sec"
+    place-hint: "&8Place down to use this upgraded hopper."

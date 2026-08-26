@@ -1,0 +1,73 @@
+settings:
+  max-tier: 5
+  storage-type: "PDC"
+  interaction-mode: "SNEAK_RIGHT_CLICK"
+  preserve-tier-on-break: true
+  click-cooldown-ms: 350
+
+  effects:
+    enable-sounds: true
+    enable-particles: true
+    upgrade-sound: "ENTITY_PLAYER_LEVELUP"
+    upgrade-sound-volume: 1.0
+    upgrade-sound-pitch: 1.2
+    max-tier-sound: "BLOCK_ANVIL_USE"
+    fail-sound: "ENTITY_VILLAGER_NO"
+    fail-sound-volume: 0.8
+    fail-sound-pitch: 0.9
+    particle-type: "VILLAGER_HAPPY"
+    particle-count: 15
+
+tiers:
+  1:
+    name: "&7Tier I Hopper"
+    speed: 2
+    cost: 0
+    cooldown-ticks: 10
+    items-per-transfer: 1
+    description: "&7Default transfer speed."
+    display-material: "HOPPER"
+  2:
+    name: "&aTier II Hopper"
+    speed: 4
+    cost: 1000
+    cooldown-ticks: 5
+    items-per-transfer: 1
+    description: "&a2x faster &7than baseline."
+    display-material: "IRON_INGOT"
+  3:
+    name: "&bTier III Hopper"
+    speed: 8
+    cost: 5000
+    cooldown-ticks: 2
+    items-per-transfer: 1
+    description: "&b4x faster &7than baseline."
+    display-material: "GOLD_INGOT"
+  4:
+    name: "&dTier IV Hopper"
+    speed: 16
+    cost: 15000
+    cooldown-ticks: 1
+    items-per-transfer: 1
+    description: "&d8x faster &7than baseline."
+    display-material: "DIAMOND"
+  5:
+    name: "&6Tier V Hopper"
+    speed: 32
+    cost: 50000
+    cooldown-ticks: 1
+    items-per-transfer: 2
+    description: "&616x Maximum Supercharged speed!"
+    display-material: "NETHERITE_INGOT"
+
+gui:
+  title: "&8Upgradeable Hopper &7(&eTier {CURRENT_TIER}&7)"
+  size: 27
+  filler-material: "GRAY_STAINED_GLASS_PANE"
+  filler-name: " "
+
+  items:
+    info-slot: 11
+    upgrade-slot: 15
+    max-tier-slot: 15
+    close-slot: 22

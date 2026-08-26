@@ -1,0 +1,28 @@
+name: UpgradeableHoppers
+version: '${project.version}'
+main: com.github.upgradeablehopper.UpgradeableHoppers
+api-version: '1.20'
+authors: [ "UpgradeableHoppersDev" ]
+description: "Production-ready Paper plugin allowing players to upgrade vanilla Minecraft hoppers with real transfer speed acceleration."
+website: "https://papermc.io"
+
+softdepend:
+  - Vault
+
+permissions:
+  upgradeablehopper.use:
+    description: Allows players to open and view the upgrade GUI for hoppers.
+    default: true
+  upgradeablehopper.upgrade:
+    description: Allows players to purchase hopper upgrades.
+    default: true
+  upgradeablehopper.admin:
+    description: Gives administrative access to set tiers, inspect hoppers, and reload plugin configuration.
+    default: op
+
+commands:
+  upgradeablehoppers:
+    description: Main command for UpgradeableHoppers plugin.
+    aliases: [ "uh", "uhopper", "upgradehopper" ]
+    permission: upgradeablehopper.use
+    usage: "/uh [reload|set <tier>|info|help]"
